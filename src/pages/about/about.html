@@ -1,11 +1,28 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      About
+      Calcular custo
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
+  <ion-card>
+    <ion-list>
+      <ion-item>
+        <ion-label stacked>Preço da gasolina</ion-label>
+        <ion-input #precoGasolina type="numeric" required="true"></ion-input>
+      </ion-item>
 
+      <ion-item>
+        <ion-label stacked>Preço do álcool</ion-label>
+        <ion-input #precoAlcool type="numeric" required="true"></ion-input>
+      </ion-item>
+    </ion-list>
+
+    <div padding>
+      <button ion-button block (click)="goToDetalhes(precoGasolina.value, precoAlcool.value)">Calcular!
+      </button>
+    </div>
+  </ion-card>
 </ion-content>
