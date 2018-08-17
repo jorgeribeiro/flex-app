@@ -16,15 +16,17 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 export class DetalhesPage {
   precoGasolina: number;
   precoAlcool: number;
+  rendimento: number;
   resultado: string;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.precoGasolina = parseFloat(navParams.get('precoGasolina'));
     this.precoAlcool = parseFloat(navParams.get('precoAlcool'));
+    this.rendimento = parseFloat(navParams.get('rendimento')) / 100;
   }
 
   ionViewDidLoad() {
-    if (this.precoAlcool / this.precoGasolina < 0.7) {
+    if (this.precoAlcool / this.precoGasolina < this.rendimento) {
       this.resultado = 'álcool';
     } else {
       this.resultado = 'gasolina';

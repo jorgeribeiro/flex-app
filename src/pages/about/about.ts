@@ -12,14 +12,15 @@ export class AboutPage {
 
   }
 
-  goToDetalhes(precoGasolina, precoAlcool) {
-    if (precoGasolina == null || precoAlcool == null
-      || precoGasolina.length == 0 || precoAlcool.length == 0) {
-      this.presentToast('Preencha ambos os campos de preço.');
+  goToDetalhes(precoGasolina, precoAlcool, rendimento) {
+    if (precoGasolina == null || precoAlcool == null || rendimento == null
+      || precoGasolina.length == 0 || precoAlcool.length == 0 || rendimento.length == 0) {
+      this.presentToast('Preencha todos os campos.');
     } else {
       this.navCtrl.push(DetalhesPage, {
         precoGasolina: precoGasolina,
-        precoAlcool: precoAlcool
+        precoAlcool: precoAlcool,
+        rendimento: rendimento
       });
     }
   }

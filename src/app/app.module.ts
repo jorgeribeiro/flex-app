@@ -11,8 +11,6 @@ import { TabsPage } from '../pages/tabs/tabs';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
-import { FormsModule } from '@angular/forms';
-import { TextMaskModule } from 'angular2-text-mask';
 
 @NgModule({
   declarations: [
@@ -25,8 +23,6 @@ import { TextMaskModule } from 'angular2-text-mask';
   ],
   imports: [
     BrowserModule,
-    FormsModule,
-    TextMaskModule,
     IonicModule.forRoot(MyApp)
   ],
   bootstrap: [IonicApp],

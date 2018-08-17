@@ -11,17 +11,22 @@
     <ion-list>
       <ion-item>
         <ion-label stacked>Preço da gasolina</ion-label>
-        <ion-input #precoGasolina type="numeric" required="true"></ion-input>
+        <ion-input #precoGasolina type="numeric"></ion-input>
       </ion-item>
 
       <ion-item>
         <ion-label stacked>Preço do álcool</ion-label>
-        <ion-input #precoAlcool type="numeric" required="true"></ion-input>
+        <ion-input #precoAlcool type="numeric"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label stacked>Rendimento (%)</ion-label>
+        <ion-input #rendimento type="numeric" value="70"></ion-input>
       </ion-item>
     </ion-list>
 
     <div padding>
-      <button ion-button block (click)="goToDetalhes(precoGasolina.value, precoAlcool.value)">Calcular!
+      <button ion-button block (click)="goToDetalhes(precoGasolina.value, precoAlcool.value, rendimento.value)">Calcular!
       </button>
     </div>
   </ion-card>
