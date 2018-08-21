@@ -18,6 +18,10 @@ export class DetalhesPage {
   precoAlcool: number;
   rendimento: number;
   resultado: string;
+  
+  gastoAlcool: number;
+  gastoGasolina: number;
+  economia: number;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
     this.precoGasolina = parseFloat(navParams.get('precoGasolina'));
@@ -26,11 +30,15 @@ export class DetalhesPage {
   }
 
   ionViewDidLoad() {
+    console.log(this.precoAlcool / this.precoGasolina);
     if (this.precoAlcool / this.precoGasolina < this.rendimento) {
-      this.resultado = 'álcool';
+      this.resultado = 'ÁLCOOL';
     } else {
-      this.resultado = 'gasolina';
+      this.resultado = 'GASOLINA';
     }
+
+    this.gastoAlcool = this.precoAlcool * 100.0;
+    this.gastoGasolina = this.precoGasolina * 100.0;
   }
 
 }

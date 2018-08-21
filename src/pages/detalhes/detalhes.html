@@ -14,5 +14,16 @@
 
 
 <ion-content padding>
-  Abasteça com <strong>{{ resultado }}</strong>!
+  <ion-card>
+    <ion-card-content>
+        <h2>Abasteça com <strong>{{ resultado }}</strong>!</h2>
+    </ion-card-content>
+  </ion-card>
+
+  <br>
+  <h2>Resultado</h2>
+  <p>Gasto com álcool: R$ {{ gastoAlcool }},00 a cada 100Km<br>
+    Gasto com gasolina: R$ {{ gastoGasolina }},00 a cada 100Km<br>
+    Pode economizar até: R$ 1,86 a cada 100Km
+  </p>
 </ion-content>
